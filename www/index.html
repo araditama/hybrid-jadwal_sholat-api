@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+</head>
+<body>
+    <!-- Start of first page -->
+    <div data-role="page" id="page-one" class="ui-body-b">
+		<div data-role="header">
+            <a href="#left-panel" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+			<h1>Jadwal Sholat Hari Ini</h1>
+		</div><!-- /header -->
+        
+        <div data-role="panel" id="left-panel" data-theme="b" data-display="reveal">
+            <div class="panel-content">
+                <ul data-role="listview">
+                    <li><a href="#page-one">Hari</a></li>
+                    <li><a href="#page-two">Minggu</a></li>
+                    <li><a href="#page-three">Bulan</a></li>
+					<li><a href="#page-four">Satu Tahun</a></li>
+                </ul>
+            </div>
+        </div>
+
+		<div role="main" class="ui-content" >
+            <p id="target"></p>
+            <input name="text-basic" id="kota" type="text" value="" placeholder="Nama Kota">
+			<p><a href="#" class="ui-btn" id="tampilDataHarian" >Tampil Data</a>
+            </p>
+            <div id="hasilHarian" >
+                
+            </div>
+
+            <a href="#popupMap" data-rel="popup" id="bukaKompas" style="color: black;"></a>
+
+            <div data-role="popup" id="popupMap" data-transition="pop" class="ui-corner-all ui-popup ui-overlay-shadow ui-body-a" style="margin-top: 100%; ">
+               
+            </div>
+        </div>
+		
+	</div><!-- /page -->
+
+	<div data-role="page" id="page-two" class="ui-body-b">
+        <div data-role="header" class="ui-body-b">
+            <a href="#left-panel" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+            <h1>Jadwal Sholat Minggu Ini</h1>
+        </div><!-- /header -->
+        
+        <div data-role="panel" id="left-panel" data-theme="b" data-display="reveal">
+            <div class="panel-content">
+                <ul data-role="listview">
+                    <li><a href="#page-one">Hari</a></li>
+                    <li><a href="#page-two">Minggu</a></li>
+                    <li><a href="#page-three">Bulan</a></li>
+                    <li><a href="#page-four">Satu Tahun</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <div role="main" class="ui-content" >
+            <p id="targetP"></p>
+            <input name="text-basic" id="kota2" type="text" value="" placeholder="Nama Kota">
+            <p><a href="#" class="ui-btn" id="tampilDataMingguan" >Tampil Data</a>
+            </p>
+            <div id="hasilMingguan">
+           </div>
+        </div><!-- /content -->
+    </div><!-- /page -->
+    
+    <!-- Start of three page -->
+    <div data-role="page" id="page-three" class="ui-body-b">
+        <div data-role="header">
+            <a href="#left-panel" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+            <h1>Jadwal Sholat Bulan Ini</h1>
+        </div><!-- /header -->
+        
+        <div data-role="panel" id="left-panel" data-theme="b" data-display="reveal">
+            <div class="panel-content">
+                <ul data-role="listview">
+                    <li><a href="#page-one">Hari</a></li>
+                    <li><a href="#page-two">Minggu</a></li>
+                    <li><a href="#page-three">Bulan</a></li>
+                    <li><a href="#page-four">Satu Tahun</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content" >
+            <p id="targetP"></p>
+            <input name="text-basic" id="kota3" type="text" value="" placeholder="Nama Kota">
+            <p><a href="#" class="ui-btn" id="tampilDataBulanan" >Tampil Data</a>
+            </p>
+            <div id="hasilBulanan">
+           </div>
+        </div><!-- /content -->
+
+    </div><!-- /page -->
+    
+	<!-- Start of four page -->
+	<div data-role="page" id="page-four" class="ui-body-b">
+		<div data-role="header">
+            <a href="#left-panel" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Open left panel</a>
+            <h1>Jadwal Sholat Satu Tahun Ini</h1>
+        </div><!-- /header -->
+        
+        <div data-role="panel" id="left-panel" data-theme="b" data-display="reveal">
+            <div class="panel-content">
+                <ul data-role="listview">
+                    <li><a href="#page-one">Hari</a></li>
+                    <li><a href="#page-two">Minggu</a></li>
+                    <li><a href="#page-three">Bulan</a></li>
+                    <li><a href="#page-four">Satu Tahun</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content" >
+            <p id="target"></p>
+            <input name="text-basic" id="kota4" type="text" value="" placeholder="Nama Kota">
+            <p><a href="#" class="ui-btn" id="tampilDataTahunan" >Tampil Data</a>
+            </p>
+            <div id="hasilTahunan">
+                                
+            </div>
+        </div>
+	</div><!-- /page -->
+</body>
+    <script src="main.js"></script>
+
+    <style type="text/css">
+        #btMap{
+            margin-top: 5px;
+            position: absolute;
+            right: 4%;
+            border-radius: 8px;
+            border-color: 1px solid grey;
+            background: transparent;
+        }
+        #btMap > p{
+            margin: 3px;
+        }
+    </style>
+</html>
