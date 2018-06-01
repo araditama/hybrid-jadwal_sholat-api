@@ -1,2 +1,3 @@
-# Hybrid App - Implementasi API Jadwal Sholat
+# Hybrid App - Phonegap + jQuery UI
+## Implementasi API Jadwal Sholat
 
